@@ -84,7 +84,9 @@ const Works = () => {
   return (
     <>
       <div>
-        <h2 className={`${styles.sectionSubText} text-center shadow-text`}>Projects</h2>
+        <h2 className={`${styles.sectionSubText} text-center shadow-text`}>
+          Projects
+        </h2>
       </div>
 
       <div className="w-full flex max-w-4xl m-auto">

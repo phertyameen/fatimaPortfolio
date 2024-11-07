@@ -36,13 +36,13 @@ const Contact = () => {
         "service_f5msrnx",
         "template_gmccdxh",
         {
-          from_name: form.name,
+          from_name: form.Fname,
           to_name: "Fatima",
           from_email: form.email,
           to_email: "aminubabafatima8@gmail.com",
           message: form.message,
         },
-        "QNGhWkxNr3KBAQCmb"
+        "0F6KQii6jqiVxm97U"
       )
       .then(
         () => {
@@ -73,14 +73,14 @@ const Contact = () => {
       <div className="flex items-center flex-col-reverse md:flex-row justify-center gap-12">
         {/* Left side: Get in touch */}
         <div className=" bg-[#FFDDD2] flex flex-col justify-between h-96  py-4">
-
           <div className="py-3 text-primary">
             <h1 className="font-bold text-center  ">Get in Touch</h1>
-            <p className="text-sm  max-w-[55%] mx-auto py-3 ">Impressed with what you see and would like to get in touch?</p>
+            <p className="text-sm  max-w-[55%] mx-auto py-3 ">
+              Impressed with what you see and would like to get in touch?
+            </p>
           </div>
-         
-          <Socials showText = {true}/>
-       
+
+          <Socials showText={true} />
         </div>
 
         {/* Right side: Contact form */}
