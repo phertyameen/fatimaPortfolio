@@ -10,7 +10,7 @@ const FeedbackCard = (props) => {
   return (
     <motion.div
       variants={fadeIn("", "spring", index * 0.5, 0.75)}
-      className="p-10 rounded-3xl xs:w-[320px] w-full shadow-lg"
+      className="p-8 rounded-3xl shadow-lg col-span-4 sm:col-span-2 sm:mr-6 xl:col-span-1"
     >
       <p className="text-[#631E05] font-black text-[48px]">"</p>
 
@@ -50,7 +50,7 @@ const Feedbacks = () => {
         </motion.div>
       </div>
 
-      <div className="-mt-20 pb-14 flex justify-around px-5 gap-7}">
+      <div className="w-full m-auto -mt-20 pb-14 grid grid-cols-4 px-5 sm:gap-7}">
         {testimonials.map((testiment, index) => {
           return (
             <FeedbackCard

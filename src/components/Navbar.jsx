@@ -45,7 +45,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="my-logo"
-            className="w-[200px] h-[40px] object-contain opacity-70"
+            className="w-max h-14 object-contain opacity-70"
           />
         </Link>
 
