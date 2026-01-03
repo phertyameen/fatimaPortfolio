@@ -20,7 +20,6 @@ import {
   figma,
   kadahive,
   linkedin,
-  phone,
   twitter,
   whatsapp,
   repository,
@@ -39,6 +38,8 @@ import {
   proofpass,
   attendx,
   safegig,
+  telegram,
+  farcaster,
 } from "../assets";
 
 const socialss = [
@@ -51,12 +52,16 @@ const socialss = [
     url: "https://www.linkedin.com/in/fatima-aminubaba-839835176/",
   },
   {
-    icon: phone,
-    desc: "(+234)8146434800",
-  },
-  {
     icon: twitter,
     url: "https://twitter.com/phertmahmad11",
+  },
+  {
+    icon: farcaster,
+    url: "https://farcaster.xyz/teemahbee",
+  },
+  {
+    icon: telegram,
+    url: "https://t.me/teemahbee",
   },
   {
     icon: whatsapp,

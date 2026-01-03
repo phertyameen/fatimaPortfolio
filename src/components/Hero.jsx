@@ -3,7 +3,9 @@ import { styles } from "../styles";
 const Hero = () => {
   return (
     <section className="w-full mx-auto opacity-90 mt-20 pb-20">
-      <div className={`${styles.paddingX} flex flex-col md:flex-row items-center w-full justify-around py-3 gap-10 md:gap-0`}>
+      <div
+        className={`${styles.paddingX} flex flex-col md:flex-row items-center w-full justify-around py-3 gap-10 md:gap-0`}
+      >
         {/* Breif about &  Time Line div */}
         <div className="flex gap-4 px-2">
           {/* Timeline div */}
@@ -13,14 +15,27 @@ const Hero = () => {
           </div>
           {/* Breif About */}
           <div className="lg:text-[60px] text-primary">
-            <h1 className="lg:leading-[80px] lg:text-[40px] sm:text-[35px] xs:text-[30px] text-[25px] mt-2 font-bold whitespace-nowrap">Hi, I'm Fatima Aminu</h1>
+            <h1 className="lg:leading-[80px] lg:text-[40px] sm:text-[35px] xs:text-[30px] text-[25px] mt-2 font-bold whitespace-nowrap">
+              Hi, I'm Fatima Aminu
+            </h1>
             <p className="font-medium lg:leading-[40px] sm:text-[30px] xs:text-[20px] text-[18px] max-w-[500px]">
-              A dynamic fullstack developer specialised in backend development that writes solidity for fun! for now 😉
+              A dynamic fullstack developer specialised in backend development
+              that writes solidity for fun! for now 😉
             </p>
             {/* hero resume and contact me button */}
             <div className="flex gap-2 sm:gap-16 mt-8 sm:mt-14">
               <button className={`${styles.btnStyle}`}>Download CV</button>
-              <button className={`${styles.btnStyle}`}>Contact Me</button>
+              <button
+                className={`${styles.btnStyle}`}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                Contact Me
+              </button>
             </div>
           </div>
         </div>

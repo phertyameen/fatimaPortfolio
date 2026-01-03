@@ -1,4 +1,3 @@
-import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { socialss } from "../constants";
 
@@ -15,7 +14,7 @@ const Smedia = ({ icon, url, index }) => (
   </span>
 );
 
-const Socials = ({showText}) => {
+const Socials = ({ showText }) => {
   return (
     <section className="text-[#631E05] h-10 w-full p-10 mt-5 flex flex-col gap-3 justify-center items-center">
       <div className=" flex gap-4 justify-center items-center">
@@ -23,10 +22,10 @@ const Socials = ({showText}) => {
           <Smedia {...social} key={`social-icon-${index}`} index={index} />
         ))}
       </div>
-        {/* Conditionally render text if is true */}
+      {/* Conditionally render text if is true */}
       {showText && (
         <p className="tracking-wide font-medium text-center">
-          Made by FATIMA AMINU @ your service
+          FATIMA AMINU @ your service
         </p>
       )}
     </section>

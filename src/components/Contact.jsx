@@ -1,24 +1,22 @@
-import { useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import Socials from "./Socials";
+import toast from "react-hot-toast";
 
-// template_tx9jom8
-// service_xk6rp5y - Google service ID
-// QNGhWkxNr3KBAQCmb - Public API Key
+const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
-  const formRef = useRef();
-
   const [loading, setLoading] = useState(false);
 
   const [form, setForm] = useState({
-    Fname: "",
-    Lname: "",
+    fName: "",
+    lName: "",
     email: "",
     message: "",
+    botField: "", // honeypot
   });
 
   const handleChange = (e) => {
@@ -29,39 +27,43 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // 🛑 Spam check
+    if (form.botField) {
+      return; // silently fail
+    }
+
     setLoading(true);
 
     emailjs
       .send(
-        "service_f5msrnx",
-        "template_gmccdxh",
+        serviceID,
+        templateID,
         {
-          from_name: form.Fname,
-          to_name: "Fatima",
+          from_name: `${form.fName} ${form.lName}`,
           from_email: form.email,
-          to_email: "aminubabafatima8@gmail.com",
           message: form.message,
         },
-        "0F6KQii6jqiVxm97U"
+        publicKey
       )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you for your message. I will get back to you shortly.");
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-
-          console.log(error);
-
-          alert("Something went wrong");
-        }
-      );
+      .then(() => {
+        // setLoading(false);
+        toast.success(
+          "Thank you for your message. I will get back to you shortly."
+        );
+        setForm({
+          fName: "",
+          lName: "",
+          email: "",
+          message: "",
+          botField: "",
+        });
+      })
+      .catch(() => {
+        toast.error("Something went wrong. Please try again.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -80,13 +82,12 @@ const Contact = () => {
             </p>
           </div>
 
-          <Socials showText={true} />
+          <Socials showText={false} />
         </div>
 
         {/* Right side: Contact form */}
         <div className="  bg-transparent p-8 rounded-2xl max-w-[500px] w-full shadowFormCard">
           <form
-            ref={formRef}
             onSubmit={handleSubmit}
             className="mt-10 flex flex-col gap-2 w-full"
           >
@@ -94,18 +95,19 @@ const Contact = () => {
             <div className="flex flex-col md:flex-row gap-3">
               {/* first namee div */}
               <div className="flex flex-col ">
-                <label htmlFor="Fname" className="">
+                <label htmlFor="fName" className="">
                   <span className="text-[#631E05] font-medium mb-4">
                     First Name
                   </span>
                 </label>
                 <input
                   type="text"
-                  name="Fname"
-                  id="Fname"
-                  value={form.Fname}
+                  name="fName"
+                  id="fName"
+                  value={form.fName}
                   onChange={handleChange}
                   placeholder="fullname"
+                  required
                   className="bg-transparent  border border-[#631E05] outline-none p-2 placeholder:text-gray-400 placeholder:text-xs text-secondary
               rounded-lg outlined-none font-medium"
                 />
@@ -113,16 +115,16 @@ const Contact = () => {
               {/* last name */}
 
               <div className="flex flex-col">
-                <label htmlFor="Lname" className="">
+                <label htmlFor="lName" className="">
                   <span className="text-[#631E05] font-medium mb-4">
                     Last Name
                   </span>
                 </label>
                 <input
                   type="text"
-                  name="Lname"
-                  id="Lname"
-                  value={form.Lname}
+                  name="lName"
+                  id="lName"
+                  value={form.lName}
                   onChange={handleChange}
                   placeholder="Last Name"
                   className="bg-transparent border border-[#631E05] outline-none p-2 placeholder:text-gray-400 placeholder:text-xs text-secondary
@@ -141,6 +143,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
+                required
                 className="border border-[#631E05] outline-none p-2 text-[#f0f0f0]
               rounded-lg placeholder:text-gray-400 placeholder:text-xs font-medium"
               />
@@ -160,15 +163,33 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="I am all ears..."
+                required
                 className="border border-[#631E05] placeholder:text-gray-400 placeholder:text-xs rounded-lg p-3 font-medium outline-none"
               ></textarea>
+              <input
+                type="text"
+                name="botField"
+                value={form.botField}
+                onChange={handleChange}
+                className="hidden"
+                tabIndex="-1"
+                autoComplete="off"
+              />
             </>
 
             <button
               type="submit"
-              className="bg-[#631E05] text-white py-3 px-16 outline-none border-none font-medium shadow-md rounded-xl w-fit m-auto"
+              disabled={loading}
+              className="bg-[#631E05] text-white py-3 px-16 outline-none border-none font-medium shadow-md rounded-xl w-fit m-auto flex items-center gap-2"
             >
-              {loading ? "Submitting...." : "Send"}
+              {loading ? (
+                <>
+                  <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                "Send"
+              )}
             </button>
           </form>
         </div>

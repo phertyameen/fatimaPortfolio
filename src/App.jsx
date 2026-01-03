@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import "./index.css";
 
 import {
@@ -16,6 +17,17 @@ const App = () => {
   return (
     // z-0
     <BrowserRouter>
+      <Toaster
+        toastOptions={{
+          style: {
+            background: "#631E05",
+            color: "#fff",
+          },
+        }}
+        position="top-right"
+        reverseOrder={false}
+      />
+
       <div className="relative bg-primary">
         <div className="bg-[#FFFDFDFA] bg-cover bg-no-repeat bg-center">
           <Navbar />
@@ -29,11 +41,11 @@ const App = () => {
       <Works />
       <Feedbacks />
 
-      <div className="">
+      <div id="contact">
         <Contact />
         {/* <StarsCanvas /> */}
-        <Socials showText = {true} />
       </div>
+      <Socials showText={true} />
     </BrowserRouter>
   );
 };

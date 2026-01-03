@@ -4,6 +4,8 @@ import uiuxLogo from "../assets/tech/ux-ui-logo.png"
 import creator from "./creator.png";
 import web from "./web.png";
 import github from "./github.png";
+import telegram from "./telegram.png";
+import farcaster from "./farcaster.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -90,6 +92,8 @@ export {
   love,
   phone,
   twitter,
+  telegram,
+  farcaster,
   whatsapp,
   logo,
   backend,
