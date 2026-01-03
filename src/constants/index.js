@@ -1,10 +1,14 @@
 import {
   internpulse,
   backend,
-  uiuxLogo,
-  creator,
+  typeorm,
+  nextjs,
+  nestjs,
+  mssql,
+  postgres,
+  solidity,
   web,
-  javascript,
+  web3,
   typescript,
   html,
   css,
@@ -14,36 +18,27 @@ import {
   nodejs,
   git,
   figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  tomato,
   kadahive,
-  lawal,
-  github,
   linkedin,
-  love,
   phone,
   twitter,
   whatsapp,
   repository,
-  imagegenerator,
-  metaverse,
-  naijabuzz300,
-  shoppingcart,
-  portfolio,
-  summarizer,
   trendsgram,
   travelbuddy,
-  homeme,
   firstbankk,
   itermss,
   kudaa,
   leadwayy,
   schools,
   leadway,
+  blockchain,
+  shield,
+  wallet,
+  ethereum,
+  proofpass,
+  attendx,
+  safegig,
 } from "../assets";
 
 const socialss = [
@@ -84,21 +79,6 @@ export const navLinks = [
   },
 ];
 
-const services = [
-  {
-    title: "Frontend Developer",
-    icon: web,
-  },
-  {
-    title: "UI/UX Desiner",
-    icon: uiuxLogo,
-  },
-  {
-    title: "Backend",
-    icon: backend,
-  },
-];
-
 const technologies = [
   {
     name: "HTML 5",
@@ -109,8 +89,12 @@ const technologies = [
     icon: css,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    title: "Frontend Developer",
+    icon: web,
+  },
+  {
+    title: "React",
+    icon: reactjs,
   },
   {
     name: "React JS",
@@ -132,9 +116,100 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
+  {
+    title: "NextJs",
+    icon: nextjs,
+  },
+  {
+    title: "Backend",
+    icon: backend,
+  },
+  {
+    title: "NodeJs",
+    icon: nodejs,
+  },
+  {
+    title: "Typescript",
+    icon: typescript,
+  },
+  {
+    title: "NestJs",
+    icon: nestjs,
+  },
+  {
+    title: "TypeORM",
+    icon: typeorm,
+  },
+  {
+    title: "PostgreSQl",
+    icon: postgres,
+  },
+  {
+    title: "Mssql",
+    icon: mssql,
+  },
+  {
+    title: "Web 3",
+    icon: web3,
+  },
+  {
+    title: "Solidity",
+    icon: solidity,
+  },
+];
+
+const services = [
+  {
+    title: "Full-Stack Web Development",
+    icon: web,
+  },
+  {
+    title: "Backend & API Development",
+    icon: backend,
+  },
+  {
+    title: "Smart Contract Development",
+    icon: blockchain,
+  },
+  {
+    title: "Smart Contract Security Review",
+    icon: shield,
+  },
+  {
+    title: "Web3 Integration",
+    icon: wallet,
+  },
+  {
+    title: "Open-Source Collaboration",
+    icon: git,
+  },
 ];
 
 const experiences = [
+  {
+    title: "Open-source contributor",
+    company_name: "Lodster",
+    icon: ethereum,
+    iconBg: "#383E56",
+    date: "Ongoing",
+    points: [
+      "Solved issue that improved debuggability by providing clearer error message and feedback during validator exits.",
+      "Worked on resubscribing to beacon subnets if current epoch dependent root changed",
+      "",
+    ],
+  },
+  {
+    title: "Backend Developer",
+    company_name: "Leadway Assurance",
+    icon: leadway,
+    iconBg: "#383E56",
+    date: "October 2024",
+    points: [
+      "Built multiple nestjs projects, contributing to backend development",
+      "Designated as a team tead to a team of 5 developers on two separate occasions.",
+      "Successfully managed to deliver challenging projects within a tight deadline.",
+    ],
+  },
   {
     title: "Frontend Developer",
     company_name: "Leadway Assurance",
@@ -217,6 +292,60 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "safegig",
+    description:
+      "SafeGig is a decentralized escrow platform for freelancers and clients, built on the ethereum Network. It helps freelancers and clients work together safely by locking funds in a smart contract and releasing them only when both sides agree.",
+    tags: [
+      {
+        name: "solidity",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: safegig,
+    source_code_link: "https://github.com/BlockHaven-Labs/SafeGig",
+    demo_link: "",
+  },
+  {
+    name: "proofpass",
+    description:
+      "ProofPass is a blockchain-based event attendance and verification platform built on Base, designed to make check-ins tamper-proof, transparent, and profitable.",
+    tags: [
+      {
+        name: "solidity",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: proofpass,
+    source_code_link: "https://github.com/phertyameen/proofpass",
+    demo_link: "https://proofpass-pi.vercel.app/",
+  },
+  {
+    name: "attendX",
+    description:
+      "AttendX is a blockchain-powered attendance tracking system that ensures records aretamper-proof, transparent and reliable",
+    tags: [
+      {
+        name: "solidity",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: attendx,
+    source_code_link: "https://github.com/phertyameen/attendX",
+    demo_link: "https://attend-x-gold.vercel.app/",
+  },
   {
     name: "Underwriters",
     description: "A UI clone of an insurance inspection management system",

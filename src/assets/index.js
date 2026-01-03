@@ -12,12 +12,22 @@ import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
+import typescript from "./tech/typescript.jpeg";
+import web3 from "./tech/web3.jpeg";
+import nestjs from "./tech/nestjs.png";
+import nextjs from "./tech/nextjs.png";
+import postgres from "./tech/postgres.jpeg";
+import mssql from "./tech/mssql.jpeg";
+import solidity from "./tech/solidity.jpeg";
+import shield from "./tech/shield.jpeg";
+import typeorm from "./tech/typeorm.png";
+import wallet from "./tech/wallet.png";
+import ethereum from "./tech/ethereum.png";
+import blockchain from "./tech/blockchain.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -52,6 +62,9 @@ import itermss from "./projects/itermss.png";
 import kudaa from "./projects/kudaa.png";
 import leadwayy from "./projects/leadwayy.png";
 import schools from "./projects/schools.png";
+import proofpass from "./projects/proofpass.png";
+import attendx from "./projects/attendx.png";
+import safegig from "./projects/safegig.png";
 import leadway from "./leadwaylogo.jpeg";
 
 export {
@@ -83,6 +96,7 @@ export {
   uiuxLogo,
   creator,
   web,
+  web3,
   github,
   menu,
   close,
@@ -91,12 +105,17 @@ export {
   figma,
   git,
   html,
-  javascript,
   nodejs,
   reactjs,
   redux,
   tailwind,
   typescript,
+  typeorm,
+  mssql,
+  nestjs,
+  nextjs,
+  postgres,
+  solidity,
   meta,
   shopify,
   starbucks,
@@ -104,4 +123,11 @@ export {
   tomato,
   kadahive,
   lawal,
+  blockchain,
+  shield, 
+  wallet,
+  ethereum,
+  proofpass,
+  attendx,
+  safegig
 };
