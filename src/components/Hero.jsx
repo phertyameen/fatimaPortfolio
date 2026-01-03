@@ -15,8 +15,7 @@ const Hero = () => {
           <div className="lg:text-[60px] text-primary">
             <h1 className="lg:leading-[80px] lg:text-[40px] sm:text-[35px] xs:text-[30px] text-[25px] mt-2 font-bold whitespace-nowrap">Hi, I'm Fatima Aminu</h1>
             <p className="font-medium lg:leading-[40px] sm:text-[30px] xs:text-[20px] text-[18px] max-w-[500px]">
-              A dynamic frontend web developer driven by an unwavering passion
-              for crafting exceptional user experiences.
+              A dynamic fullstack developer specialised in backend development that writes solidity for fun! for now 😉
             </p>
             {/* hero resume and contact me button */}
             <div className="flex gap-2 sm:gap-16 mt-8 sm:mt-14">
