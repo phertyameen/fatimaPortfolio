@@ -1,7 +1,7 @@
 import logo from "./logo.png";
 import backend from "./backend.png";
 import uiuxLogo from "../assets/tech/ux-ui-logo.png"
-import creator from "./creator.png";
+// import creator from "./creator.png";
 import web from "./web.png";
 import github from "./github.png";
 import telegram from "./telegram.png";
@@ -10,7 +10,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
+// import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -31,13 +31,13 @@ import wallet from "./tech/wallet.png";
 import ethereum from "./tech/ethereum.png";
 import blockchain from "./tech/blockchain.png";
 
-import meta from "./company/meta.png";
+// import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-import tomato from "./company/tomato.png";
+// import starbucks from "./company/starbucks.png";
+// import tesla from "./company/tesla.png";
+// import tomato from "./company/tomato.png";
 import kadahive from "./company/kadahive.jpg";
-import lawal from "./lawal.jpg";
+// import lawal from "./lawal.jpg";
 
 import linkedin from "./socials/linkedin.svg";
 import love from "./socials/love.svg";
@@ -46,16 +46,15 @@ import twitter from "./socials/twitter.svg";
 import whatsapp from "./socials/whatsapp.svg";
 import repository from "./socials/repository.svg";
 import preview from "../assets/preview.svg";
-import imagegenerator from "./projects/imagegenerator.jpg";
-import metaverse from "./projects/metaversemadness.jpg";
-import naijabuzz300 from "./projects/naijabuzz300.jpg";
-import shoppingcart from "./projects/shoppingcart.jpg";
-import portfolio from "./projects/tomilolaportfolio.jpg";
+// import imagegenerator from "./projects/imagegenerator.jpg";
+// import metaverse from "./projects/metaversemadness.jpg";
+// import naijabuzz300 from "./projects/naijabuzz300.jpg";
+// import shoppingcart from "./projects/shoppingcart.jpg";
 
 import internpulse from "./company/internpulse.jpg";
 
 import travelbuddy from "./projects/travelbuddy.jpg";
-import summarizer from "./projects/summarizer.jpg";
+// import summarizer from "./projects/summarizer.jpg";
 import trendsgram from "./projects/trendsgram.png";
 import homeme from "./HomeMe.png";
 
@@ -67,6 +66,7 @@ import schools from "./projects/schools.png";
 import proofpass from "./projects/proofpass.png";
 import attendx from "./projects/attendx.png";
 import safegig from "./projects/safegig.png";
+import esustellar from "./projects/esustellar.png";
 import leadway from "./leadwaylogo.jpeg";
 
 export {
@@ -79,13 +79,12 @@ export {
   homeme,
   trendsgram,
   travelbuddy,
-  summarizer,
+  // summarizer,
   internpulse,
-  imagegenerator,
-  metaverse,
-  naijabuzz300,
-  shoppingcart,
-  portfolio,
+  // imagegenerator,
+  // metaverse,
+  // naijabuzz300,
+  // shoppingcart,
   preview,
   repository,
   linkedin,
@@ -98,14 +97,14 @@ export {
   logo,
   backend,
   uiuxLogo,
-  creator,
+  // creator,
   web,
   web3,
   github,
   menu,
   close,
   css,
-  docker,
+  // docker,
   figma,
   git,
   html,
@@ -120,18 +119,19 @@ export {
   nextjs,
   postgres,
   solidity,
-  meta,
+  // meta,
   shopify,
-  starbucks,
-  tesla,
-  tomato,
+  // starbucks,
+  // tesla,
+  // tomato,
   kadahive,
-  lawal,
+  // lawal,
   blockchain,
   shield, 
   wallet,
   ethereum,
   proofpass,
   attendx,
-  safegig
+  safegig,
+  esustellar
 };

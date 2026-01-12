@@ -105,7 +105,7 @@ const About = () => {
         <p className={`${styles.sectionSubText} shadow-text`}>Services</p>
         <div className="grid h-full sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-10 bg-[#FFFDFDFA]">
           {services.map((service, index) => (
-            <ServiceCard key={service.index} index={index} {...service} />
+            <ServiceCard key={index} index={index} {...service} />
           ))}
         </div>
       </div>
@@ -116,7 +116,7 @@ const About = () => {
         <div className="scroll-container bg-[#FFFDFDFA]">
           {technologies.map((techStack, index) => (
             <TechnologyCard
-              key={techStack.index}
+              key={index}
               index={index}
               {...techStack}
             />

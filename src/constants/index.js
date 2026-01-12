@@ -38,6 +38,7 @@ import {
   proofpass,
   attendx,
   safegig,
+  esustellar,
   telegram,
   farcaster,
 } from "../assets";
@@ -298,6 +299,24 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Esustellar",
+    description:
+      "Esustellar is an open-source platform that brings informal savings groups (Esusu / Ajo / Rotating Savings) to the Stellar blockchain.",
+    tags: [
+      {
+        name: "rust",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: esustellar,
+    source_code_link: "https://github.com/BlockHaven-Labs/esustellar",
+    demo_link: "https://esustellar-web.vercel.app/",
+  },
+  {
     name: "safegig",
     description:
       "SafeGig is a decentralized escrow platform for freelancers and clients, built on the ethereum Network. It helps freelancers and clients work together safely by locking funds in a smart contract and releasing them only when both sides agree.",
@@ -313,7 +332,7 @@ const projects = [
     ],
     image: safegig,
     source_code_link: "https://github.com/BlockHaven-Labs/SafeGig",
-    demo_link: "",
+    demo_link: "https://safe-gig-frontend.vercel.app/",
   },
   {
     name: "proofpass",
